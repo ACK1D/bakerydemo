@@ -6,13 +6,25 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('locations', '0005_use_json_field_for_body_streamfield'),
+        ("locations", "0005_use_json_field_for_body_streamfield"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='locationoperatinghours',
-            name='day',
-            field=models.CharField(choices=[('MON', 'Monday'), ('TUE', 'Tuesday'), ('WED', 'Wednesday'), ('THU', 'Thursday'), ('FRI', 'Friday'), ('SAT', 'Saturday'), ('SUN', 'Sunday')], default='MON', max_length=3),
+            model_name="locationoperatinghours",
+            name="day",
+            field=models.CharField(
+                choices=[
+                    ("MON", "Monday"),
+                    ("TUE", "Tuesday"),
+                    ("WED", "Wednesday"),
+                    ("THU", "Thursday"),
+                    ("FRI", "Friday"),
+                    ("SAT", "Saturday"),
+                    ("SUN", "Sunday"),
+                ],
+                default="MON",
+                max_length=3,
+            ),
         ),
     ]
